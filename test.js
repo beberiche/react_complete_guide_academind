@@ -122,4 +122,41 @@
 //   }
 // }
 
+// console.log(User.prototype);
+
 // new User().sayHi(); // 보라님 안녕하세요!
+
+// let rabbit = {
+//   jumps: true,
+// };
+
+// let animal = {
+//   eats: true,
+//   walk() {
+//     alert("동물이 걷습니다.");
+//   },
+// };
+
+// rabbit.__proto__ = animal;
+// animal.__proto__ = rabbit;
+
+// console.log(rabbit.eats);
+// console.log(animal.jumps);
+
+let animal = {
+  eats: true,
+  jump: 100,
+};
+
+let rabbit = Object.create(animal, { sleep: { value: 200, configurable: true } });
+// console.log(Object.getOwnPropertyDescriptors(animal));
+Object.defineProperty(rabbit, "sleep", { writable: true });
+rabbit.sleep = 300;
+console.log(rabbit.sleep);
+
+// console.log(Object.getOwnPropertyDescriptor(rabbit, "sleep"));
+// console.log(rabbit.sleep);
+// animal.jump = 100;
+// console.log(Object.getPrototypeOf(rabbit));
+
+// console.log(Object.getPrototypeOf(animal));
