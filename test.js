@@ -1,3 +1,5 @@
+"use-strict";
+
 // class Human {
 //   gender = "male";
 
@@ -143,20 +145,128 @@
 // console.log(rabbit.eats);
 // console.log(animal.jumps);
 
-let animal = {
-  eats: true,
-  jump: 100,
-};
+// let animal = {
+//   eats: true,
+//   jump: 100,
+// };
 
-let rabbit = Object.create(animal, { sleep: { value: 200, configurable: true } });
-// console.log(Object.getOwnPropertyDescriptors(animal));
-Object.defineProperty(rabbit, "sleep", { writable: true });
-rabbit.sleep = 300;
-console.log(rabbit.sleep);
+// let rabbit = Object.create(animal, { sleep: { value: 200, configurable: true } });
+// // console.log(Object.getOwnPropertyDescriptors(animal));
+// Object.defineProperty(rabbit, "sleep", { writable: true });
+// rabbit.sleep = 300;
+// console.log(rabbit.sleep);
 
 // console.log(Object.getOwnPropertyDescriptor(rabbit, "sleep"));
 // console.log(rabbit.sleep);
 // animal.jump = 100;
 // console.log(Object.getPrototypeOf(rabbit));
 
-// console.log(Object.getPrototypeOf(animal));
+// console.log(Object.getPrototypeOf(animal));let num = 0;
+
+// 함수 선언식
+// countUp1(2);
+// function countUp1(num) {
+//   num++;
+//   countUp2(num);
+//   function countUp2(num) {
+//     num++;
+//     countUp3(num);
+//     function countUp3(num) {
+//       num++;
+//       countUp4(num);
+//       function countUp4(num) {
+//         num++;
+//         countUp5(num);
+//         function countUp5(num) {
+//           num++;
+//           countUp6(num);
+//           function countUp6(num) {
+//             console.log(num);
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// 함수 표현식
+// const countUp1 = function (num) {
+//   num++;
+//   const countUp2 = function (num) {
+//     num++;
+//     const countUp3 = function (num) {
+//       num++;
+//       const countUp4 = function (num) {
+//         num++;
+//         const countUp5 = function (num) {
+//           num++;
+//           const countUp6 = function (num) {
+//             console.log(num);
+//           };
+//           countUp6(num);
+//         };
+//         countUp5(num);
+//       };
+//       countUp4(num);
+//     };
+//     countUp3(num);
+//   };
+//   countUp2(num);
+// };
+// countUp1(2);
+
+// 재귀
+// let countUp = (num, cnt) => {
+//   if (cnt == 5) {
+//     console.log(num);
+//     return;
+//   }
+//   countUp(++num, ++cnt);
+// };
+// countUp(2, 0);
+
+// IFFE || arr Func
+// ((num) => ((num) => ((num) => ((num) => ((num) => ((num) => console.log(num))(++num))(++num))(++num))(++num))(++num))(2);
+
+// fetch(`https://jsonplaceholder.typicode.com/users`)
+//   .then((resp) => resp.json())
+//   .then((data) => console.log(data));
+
+// function b () {
+//   ...
+// }
+
+// function a(b) {
+
+// }
+
+// [1, 2, 3].forEach((item) => console.log(item));
+
+// function a() {
+//   function b() {
+//     function c() {}
+//     try {
+//       c();
+//     } catch (e) {
+//       console.log(e);
+//     }
+//   }
+//   try {
+//     b();
+//   } catch (e) {
+//     console.log(e);
+//   }
+// }
+// try {
+//   a();
+// } catch (e) {
+//   console.log(e);
+// }
+
+// return new Promise(resolve, reject) {
+
+// }
+// fetch(`https://jsonplaceholder.typicode.com/users`)
+//   .then((result) => result.json())
+//   .then((data) => console.log(data))
+//   .catch((e) => console.log(e));
