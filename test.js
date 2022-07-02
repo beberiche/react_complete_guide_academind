@@ -270,3 +270,34 @@
 //   .then((result) => result.json())
 //   .then((data) => console.log(data))
 //   .catch((e) => console.log(e));
+
+// Promise.race([
+//   new Promise((resolve) => setTimeout(() => resolve(1), 3000)), // 1
+//   new Promise((resolve) => setTimeout(() => resolve(2), 500)), // 2
+//   new Promise((_, reject) => setTimeout(() => reject(3), 1000)), // 3
+// ]).then((data) => console.log(data));
+
+// async function f() {
+//   return 1;
+// }
+// console.log(f());
+
+// Promise.race([
+//   new Promise((resolve, reject) => setTimeout(() => resolve(1), 1000)),
+//   // new Promise((resolve, reject) => setTimeout(() => reject(new Error("에러 발생!")), 2000)),
+//   new Promise((resolve, reject) => setTimeout(() => resolve(3), 5000)),
+// ]).then((data) => console.log(data));
+
+// async function f() {
+//   return 1;
+// }
+// console.log(Promise.resolve(1));
+
+// const data = await Promise.all([
+//   new Promise((resolve) => setTimeout(() => resolve(1), 3000)), // 1
+//   new Promise((resolve) => setTimeout(() => resolve(2), 500)), // 2
+//   new Promise((_, reject) => setTimeout(() => reject(3), 1000)), // 3
+// ]);
+// console.log(data);
+
+// const data = await Promise;
