@@ -1,4 +1,3 @@
-import { getRouteMatcher } from "next/dist/next-server/lib/router/utils";
 import { useRouter } from "next/router";
 
 // our-domain.com/news
